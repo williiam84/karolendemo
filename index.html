@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karolen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        .portfolio {
+  padding: 50px 20px;
+  background-color: #faf6ee;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slide img {
+  width: 48%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #5a3a24;
+}
+.depoimentos {
+  padding: 50px 20px;
+  background-color: #f1e0c6;
+  text-align: center;
+}
+
+.depoimentos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Slider de depoimentos */
+.depo-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.depo-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.depo-slide {
+  min-width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+.depo-slide span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: normal;
+  color: #5a3a24;
+}
+
+/* Dots */
+.depo-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.depo-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.depo-dot.active {
+  background-color: #5a3a24;
+}
+.footer {
+  background-color: #3b2416;
+  color: #faf6ee;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+  color: #f1e0c6;
+}
+
+.footer p, .footer a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #faf6ee;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #e6d1b2;
+}
+
+.footer-icons a {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #e6d1b2;
+  border-top: 1px solid #5a3a24;
+  padding-top: 15px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+}
+.footer {
+  background-color: #3b2416;
+  color: #faf6ee;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+  color: #f1e0c6;
+}
+
+.footer p, .footer a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #faf6ee;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #e6d1b2;
+}
+
+/* Ícones das redes sociais */
+.footer-icons i {
+  margin-right: 8px;
+  color: #f1e0c6;
+}
+
+.footer-icons a {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Linha de copyright */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #e6d1b2;
+  border-top: 1px solid #5a3a24;
+  padding-top: 15px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+}
+    /* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    color: #e6a8b7; /* rosa suave */
+}
+
+.nav-desktop a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-desktop a:hover {
+    color: #e6a8b7;
+}
+
+/* Menu mobile */
+.menu-mobile {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #e6a8b7;
+}
+
+/* Slider do menu */
+.menu-slider {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    padding: 30px 20px;
+    z-index: 999;
+}
+
+.menu-slider nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.menu-slider nav a {
+    margin-bottom: 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu-slider nav a:hover {
+    color: #e6a8b7;
+}
+
+#btnsair {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #e6a8b7;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+    }
+}
+    /* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* branco suave como base */
+    color: #333; /* texto padrão */
+    line-height: 1.6;
+}
+
+/* Links globais */
+a {
+    color: #e6a8b7; /* rosa suave */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f4c0d0; /* rosa mais claro no hover */
+}
+
+/* Cabeçalhos globais */
+h1, h2, h3, h4, h5, h6 {
+    color: #e6a8b7; /* tons de rosa para títulos */
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 15px;
+    color: #555; /* texto secundário levemente cinza */
+}
+
+/* Container padrão */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botões */
+button, .btn {
+    background-color: #e6a8b7; /* rosa suave */
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #f4c0d0; /* rosa mais claro ao passar o mouse */
+}
+
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Seções */
+section {
+    padding: 80px 0;
+}
+
+/* Espaçamento padrão entre seções */
+section + section {
+    border-top: 1px solid #f4c0d0; /* linha sutil rosa claro */
+}
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 100px 20px; /* dá espaço para header fixo */
+    background-color: #fff; /* fundo branco */
+}
+
+#inicio .main-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%; /* imagem circular */
+    margin-bottom: 25px;
+    border: 4px solid #e6a8b7; /* borda rosa suave */
+}
+
+#inicio .main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#inicio h3 {
+    font-size: 2rem;
+    color: #e6a8b7;
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+#inicio button.btn-whatsapp {
+    background-color: #e6a8b7;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#inicio button.btn-whatsapp:hover {
+    background-color: #f4c0d0;
+    transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    #inicio .main-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #inicio h3 {
+        font-size: 1.5rem;
+    }
+
+    #inicio p {
+        font-size: 0.95rem;
+    }
+
+    #inicio button.btn-whatsapp {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+}
+#sobre {
+    padding: 100px 20px;
+    background-color: #fff; /* fundo branco */
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.sobre-img {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.sobre-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.sobre-img img:hover {
+    transform: scale(1.05);
+}
+
+.sobre-txt {
+    flex: 2;
+    min-width: 250px;
+    text-align: left;
+}
+
+.sobre-txt h2 {
+    font-size: 2rem;
+    color: #e6a8b7; /* rosa suave */
+    margin-bottom: 20px;
+}
+
+.sobre-txt p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-txt {
+        text-align: center;
+    }
+
+    .sobre-img {
+        max-width: 300px;
+        margin-bottom: 25px;
+    }
+}
+.servicos {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #e6a8b7;
+}
+
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.servico {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.servico:hover {
+  transform: translateY(-10px);
+}
+
+.servico-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.servico-info {
+  padding: 20px;
+}
+
+.servico-icone {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #e6a8b7; /* rosa suave */
+}
+
+.servico h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.servico p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .servicos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.portfolio {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #e6a8b7; /* rosa suave */
+}
+
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slide img {
+  width: 48%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #e6a8b7;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+}
+.depoimentos {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.depoimentos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #e6a8b7; /* rosa suave */
+}
+
+/* Slider dos depoimentos */
+.depo-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  padding: 30px 20px;
+  background-color: #fff;
+}
+
+.depo-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.depo-slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.depo-slide p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.depo-slide span {
+  font-weight: 600;
+  color: #e6a8b7;
+}
+
+/* Dots dos depoimentos */
+.depo-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.depo-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.depo-dot.active {
+  background-color: #e6a8b7;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .depo-slider {
+    padding: 20px 15px;
+  }
+
+  .depo-slide p {
+    font-size: 0.95rem;
+  }
+}
+.footer {
+  background-color: #fff; /* fundo branco */
+  color: #555;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+  border-top: 2px solid #f4c0d0; /* linha rosa clara */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+  color: #e6a8b7; /* rosa suave */
+}
+
+.footer p, .footer a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f4c0d0; /* rosa mais claro no hover */
+}
+
+/* Ícones das redes sociais */
+.footer-icons i {
+  margin-right: 8px;
+  color: #e6a8b7;
+}
+
+.footer-icons a {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Linha de copyright */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #e6a8b7;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <h1>Karolen</h1>
+        </div>
+        
+        <nav class="nav-desktop">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#portfolio">Trabalhos</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="menu-mobile">☰</div>
+    </div>
+
+    <div class="menu-slider">
+        <button id="btnsair">X</button>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#portfolio">Trabalhos</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+    <main id="inicio">
+    <div class="main-img">
+        <img src="logo.jpeg" alt="Karolen Lash">
+    </div>
+    <h3>Karolen Lash</h3>
+    <p>Educadora licenciada de cílios e depilação | Design de sobrancelha.</p>
+    <button class="btn-whatsapp">Agendar No WhatsApp</button>
+</main>
+
+<section id="sobre">
+    <div class="sobre-container">
+        <div class="sobre-img">
+            <img src="logo.jpeg" alt="Karolen Lash">
+        </div>
+        <div class="sobre-txt">
+            <h2>Sobre Mim</h2>
+            <p>Sou educadora licenciada de cílios e depilação, com paixão por transformar a autoestima das minhas clientes. Especializada em design de sobrancelhas, ofereço técnicas modernas e personalizadas para cada rosto.</p>
+        </div>
+    </div>
+</section>
+
+<section id="servicos" class="servicos">
+  <h2>Serviços</h2>
+  <div class="servicos-container">
+
+    <!-- Cílios -->
+    <div class="servico">
+      <img src="img/cilios.jpg" alt="Cílios antes/depois" class="servico-img">
+      <div class="servico-info">
+        <div class="servico-icone"><i class="fas fa-eye"></i></div>
+        <h3>Cílios</h3>
+        <p>Extensão clássica, volume russo e híbrido. Design personalizado para cada formato de olho.</p>
+      </div>
+    </div>
+
+    <!-- Depilação -->
+    <div class="servico">
+      <img src="img/depilacao.jpg" alt="Depilação antes/depois" class="servico-img">
+      <div class="servico-info">
+        <div class="servico-icone"><i class="fas fa-scissors"></i></div>
+        <h3>Depilação</h3>
+        <p>Depilação facial e corporal com técnica segura e delicada.</p>
+      </div>
+    </div>
+
+    <!-- Sobrancelhas -->
+    <div class="servico">
+      <img src="img/sobrancelhas.jpg" alt="Sobrancelhas antes/depois" class="servico-img">
+      <div class="servico-info">
+        <div class="servico-icone"><i class="fas fa-leaf"></i></div>
+        <h3>Sobrancelhas</h3>
+        <p>Design, harmonização e correção. Henna ou micropigmentação quando aplicável.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <h2>Galeria / Portfólio de Trabalhos</h2>
+
+  <div class="slider">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="ddp.jpeg" alt="Antes do trabalho 1">
+        <img src="depoimento.jpeg" alt="Depois do trabalho 1">
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="dp3.jpeg" alt="Antes do trabalho 2">
+        <img src="dp3.jpeg" alt="Depois do trabalho 2">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="dp4.jpeg" alt="Antes do trabalho 3">
+        <img src="dp4.jpeg" alt="Depois do trabalho 3">
+      </div>
+    </div>
+    <div class="dots"></div>
+  </div>
+</section>
+<section id="depoimentos" class="depoimentos">
+  <h2>Depoimentos</h2>
+
+  <div class="depo-slider">
+    <div class="depo-slides">
+      <!-- Depoimento 1 -->
+      <div class="depo-slide">
+        <p>“Karolen transformou minhas sobrancelhas! Atendimento impecável e resultado perfeito.”</p>
+        <span>– Cliente X</span>
+      </div>
+      <!-- Depoimento 2 -->
+      <div class="depo-slide">
+        <p>“Adorei a extensão de cílios! Ficou natural e durou muito tempo.”</p>
+        <span>– Cliente Y</span>
+      </div>
+      <!-- Depoimento 3 -->
+      <div class="depo-slide">
+        <p>“O atendimento foi maravilhoso. Super indico para todos que querem unhas perfeitas!”</p>
+        <span>– Cliente Z</span>
+      </div>
+    </div>
+
+    <div class="depo-dots"></div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Sobre -->
+    <div class="footer-section footer-sobre">
+      <h3>Karolen</h3>
+      <p>Nail designer e especialista em cílios e sobrancelhas. Atendimento personalizado e resultados que elevam sua autoestima.</p>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer-section footer-contato">
+      <h4>Contato</h4>
+      <p>Telefone: +55 31 72528269</p>
+      <p>Localização: Sabará, MG</p>
+    </div>
+
+    <!-- Redes Sociais -->
+    <div class="footer-section footer-redes">
+      <h4>Siga-me</h4>
+      <div class="footer-icons">
+        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://wa.me/553172528269" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    <p>© 2026 Karolen. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+/* ==================== SLIDER PORTFÓLIO ==================== */
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.querySelector('.dots');
+let currentIndex = 0;
+
+// Cria os dots do portfólio
+slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+});
+
+// Função para atualizar slide do portfólio
+const updateSlide = () => {
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+};
+
+// Avança automaticamente o portfólio a cada 4 segundos
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide();
+}, 4000);
+
+
+/* ==================== SLIDER DE DEPOIMENTOS ==================== */
+const depoSlides = document.querySelectorAll('.depo-slide');
+const depoDotsContainer = document.querySelector('.depo-dots');
+let depoIndex = 0;
+
+// Cria os dots dos depoimentos
+depoSlides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('depo-dot');
+    if (index === 0) dot.classList.add('active');
+    depoDotsContainer.appendChild(dot);
+});
+
+// Função para atualizar slide de depoimentos
+const updateDepoSlide = () => {
+    const slideWidth = depoSlides[0].clientWidth;
+    document.querySelector('.depo-slides').style.transform = `translateX(-${depoIndex * slideWidth}px)`;
+
+    const dots = document.querySelectorAll('.depo-dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[depoIndex].classList.add('active');
+};
+
+// Avança automaticamente os depoimentos a cada 5 segundos
+setInterval(() => {
+    depoIndex = (depoIndex + 1) % depoSlides.length;
+    updateDepoSlide();
+}, 5000);
+
+
+/* ==================== MENU MOBILE ==================== */
+const menuMobile = document.querySelector('.menu-mobile');
+const menuSlider = document.querySelector('.menu-slider');
+const btnSair = document.getElementById('btnsair');
+
+menuMobile.addEventListener('click', () => {
+    menuSlider.style.right = '0';
+});
+
+btnSair.addEventListener('click', () => {
+    menuSlider.style.right = '-100%';
+});
+</script>
+
+</body>
+</html>
