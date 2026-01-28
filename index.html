@@ -863,10 +863,84 @@ section + section {
     min-width: auto;
   }
 }
+.footer {
+  background-color: #fff; /* fundo branco */
+  color: #555;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+  border-top: 2px solid #f4c0d0; /* linha rosa clara */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 15px;
+  color: #e6a8b7; /* rosa suave */
+}
+
+.footer p, .footer a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f4c0d0; /* rosa mais claro no hover */
+}
+
+/* Ícones das redes sociais */
+.footer-icons i {
+  margin-right: 8px;
+  color: #e6a8b7;
+}
+
+.footer-icons a {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Linha de copyright */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #e6a8b7;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: auto;
+  }
+}
 
     </style>
 </head>
 <body>
+    <a href="https://wa.me/553172528269" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
     <header>
     <div class="header-container">
         <div class="logo">
